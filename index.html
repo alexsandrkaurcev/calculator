@@ -1,56 +1,87 @@
-<html>
-<meta charset="UTF-8">
-<head>
-<script language='JavaScript' type='text/JavaScript'>
-document.bgColor=('gray')
-first3=24;var fifteenth=0, sixteenth=0, seventeenth=0, eighteenth=0, nineteenth=1, twentieth=0, first2, second2;second3=first3+6; third3=first3+second3; fourth3=first3+second3+third3; fifth3=fourth3/third3*first3; sixth3=third3*first3/12*second3; seventh3=first3+second3/fifth3-16*fourth3; eighth3=sixth3*(first3-5)/third3+fourth3; ninth3=eighth3/seventh3+first3*third3-fourth3;tenth3=(ninth3+first3/third3*fourth3+second3*fifth3)/sixth3+eighth3-ninth3-1;eleventh3=Math.floor(tenth3)   ;twelfth3=eleventh3-60;
-function third2(value){ document.form1.fourth2.value = value; fifteenth = twelfth3, sixteenth    = twelfth3, seventeenth  = twelfth3, eighteenth = twelfth3; nineteenth  = 1; twentieth  = twelfth3;}
-function fifth2(sixth2){ first2 = 1; 
-if(seventeenth || nineteenth) {   seventeenth = twelfth3;   nineteenth = twelfth3;   second2 = sixth2; } {   
-if (second2.indexOf(".")!=-1) {      first2=twelfth3;   } }}
-function fifteenth3(sixteenth3,seventeenth3){second2 = document.form1.fourth2.value;
-if(seventeenth3=='.') {  fifth2('0');  
-if(first2==1) {     second2 += seventeenth3;    document.form1.fourth2.value = second2;    twentieth = twelfth3;  }}
-if(sixteenth3>=twelfth3 && sixteenth3<=9)  {  fifth2('');  
-if(second2==twelfth3 && first2==1) second2='';  second2 += sixteenth3;  document.form1.fourth2.value = second2;  twentieth = 1;}
-if(seventeenth3=='-' || seventeenth3=='+' || seventeenth3=='/' || seventeenth3=='*') { 
-if(seventeenth) sixteenth = seventeenth3; 
-else {   
-if(!eighteenth) {     sixteenth = seventeenth3;     fifteenth = second2;     eighteenth=1;   }   
-else {     fifteenth = eval(fifteenth + sixteenth + second2);     sixteenth = seventeenth3;     document.form1.fourth2.value = fifteenth;   }   twentieth=twelfth3;   seventeenth = 1; }}
-if(seventeenth3=='1/x' ) { fifteenth = eval(1 / second2) ; third2(fifteenth); }
-if(seventeenth3=='sqrt') { fifteenth = Math.sqrt(second2); third2(fifteenth); }
-if(seventeenth3=='exp' ) { fifteenth = Math.exp(second2) ; third2(fifteenth); }
-if(seventeenth3=='+/-')  document.form1.fourth2.value = eval(-second2);
-if(seventeenth3=='=' && twentieth && sixteenth!='0') third2(eval(fifteenth + sixteenth + second2));
-if (seventeenth3=='C') third2(twelfth3);
-if(document.form1.fourth2.value[0] == '.')  document.form1.fourth2.value = '0' + document.form1.fourth2.value;}
-</script>
-<title>Åáàòü Êàëüêóëÿòîð äëÿ äåïðåñèè</title>
-</head>
+<!-- Designined by CodingLab -->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title>очередной калькулятор</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   </head>
 <body>
- <div align="center"><form name='form1'><TABLE bgcolor='#FFFFFF'><TR><TD><TABLE BORDER=1 cellspacing=5 cellpadding=0 bgcolor='purple'><TR align=center>	<TD colspan=5>
-    <input type='text' name='fourth2' value='0'></TD></TR><TR align=center>	<TD colspan=4><B><FONT COLOR='red'>Ìîé Êàëüêóëÿòîð</FONT></B></TD>	<TD >
-    <input type='button' name='C' value='  C  ' onclick="fifteenth3(11,'C')"></TD></TR><TR align=center>	<TD>
-    <input type='button' name='7' value='  7  '   onclick="fifteenth3(7 ,'')"></TD>	<TD>
-    <input type='button' name='8' value='  8  '   onclick="fifteenth3(8 ,'')"></TD>	<TD>
-    <input type='button' name='9' value='  9  '   onclick="fifteenth3(9 ,'')"></TD>	<TD>
-    <input type='button' name='/' value='  /  '   onclick="fifteenth3(11,'/')"></TD>	<TD>
-    <input type='button' name='sqrt' value='sqrt' onclick="fifteenth3(11,'sqrt')"></TD></TR><TR align=center>	<TD>
-    <input type='button' name='4' value='  4  ' onclick="fifteenth3(4,'')"></TD>	<TD>
-    <input type="button" name="5" value="  5  " onclick="fifteenth3(5,'')"></TD>	<TD><input type="button" name="6" value="  6  " onclick="fifteenth3(6,'')"></TD>	<TD>
-    <input type="button" name="*" value=" *  "  onclick="fifteenth3(11,'*')"></TD>	<TD>
-    <input type="button" name="exp" value="exp" onclick="fifteenth3(11,'exp')"></TD></TR><TR align=center>	<TD>
-    <input type="button" name="1" value="  1  "  onclick="fifteenth3(1,'')"></TD>	<TD>
-    <input type="button" name="2" value="  2  "  onclick="fifteenth3(2,'')"></TD>	<TD>
-    <input type="button" name="3" value="  3  "  onclick="fifteenth3(3,'')"></TD>	<TD>
-    <input type="button" name="-" value="  -  "  onclick="fifteenth3(11,'-')"></TD>	<TD>
-    <input type="button" name="1/x" value="1/x " onclick="fifteenth3(11,'1/x')"></TD></TR><TR align=center>	<TD>
-    <input type="button" name="0" value="  0  "   onclick="fifteenth3(0,'')"></TD>	<TD>
-    <input type="button" name="+/-" value=" +/- " onclick="fifteenth3(11,'+/-')"></TD>	<TD>
-    <input type="button" name="." value="  ,  "   onclick="fifteenth3(11,'.')"></TD>	<TD>
-    <input type="button" name="+" value="  +  "   onclick="fifteenth3(11,'+')"></TD>	<TD>
-    <input type="button" name="=" value="  =  "   onclick="fifteenth3(11,'=')"></TD></TR></TABLE></TD></TR></TABLE></div>
-</form>
+<div class="bubbles">
+  <span class="one"></span>
+  <span class="two"></span>
+  <span class="three"></span>
+  <span class="four"></span>
+  <span class="five"></span>
+  <span class="six"></span>
+  <span class="seven"></span>
+  <span class="seven"></span>
+</div>
+<div class="bubbles">
+  <span class="one"></span>
+  <span class="two"></span>
+  <span class="three"></span>
+  <span class="four"></span>
+  <span class="five"></span>
+  <span class="six"></span>
+  <span class="seven"></span>
+  <span class="seven"></span>
+</div>
+<div class="bubbles">
+  <span class="one"></span>
+  <span class="two"></span>
+  <span class="three"></span>
+  <span class="four"></span>
+  <span class="five"></span>
+  <span class="six"></span>
+  <span class="seven"></span>
+  <span class="seven"></span>
+</div>
+<div class="bubbles">
+  <span class="one"></span>
+  <span class="two"></span>
+  <span class="three"></span>
+  <span class="four"></span>
+  <span class="five"></span>
+  <span class="six"></span>
+  <span class="seven"></span>
+  <span class="seven"></span>
+</div>
+ <div class="container">
+   <form action="#" name="forms">
+     <input type="text" name="answer">
+     <div class="buttons">
+       <input type="button" value="AC" onclick="forms.answer.value = ''">
+       <input type="button" value="DEL" onclick="forms.answer.value = forms.answer.value.substr(0 , forms.answer.value.length -1)">
+       <input type="button" value="%" onclick="forms.answer.value += '%'">
+       <input type="button" value="/" onclick="forms.answer.value += '/'">
+     </div>
+     <div class="buttons">
+       <input type="button" value="7" onclick="forms.answer.value += '7'">
+       <input type="button" value="8" onclick="forms.answer.value += '8'">
+       <input type="button" value="9" onclick="forms.answer.value += '9'">
+       <input type="button" value="*" onclick="forms.answer.value += '*'">
+     </div>
+     <div class="buttons">
+       <input type="button" value="4" onclick="forms.answer.value += '4'">
+       <input type="button" value="5" onclick="forms.answer.value += '5'">
+       <input type="button" value="6" onclick="forms.answer.value += '6'">
+       <input type="button" value="-" onclick="forms.answer.value += '-'">
+     </div>
+     <div class="buttons">
+       <input type="button" value="1" onclick="forms.answer.value += '1'">
+       <input type="button" value="2" onclick="forms.answer.value += '2'">
+       <input type="button" value="3" onclick="forms.answer.value += '3'">
+       <input type="button" value="+" onclick="forms.answer.value += '+'">
+     </div>
+     <div class="buttons">
+       <input type="button" value="0"  onclick="forms.answer.value += '0'">
+       <input type="button" value="00" onclick="forms.answer.value += '00'">
+       <input type="button" value="." onclick="forms.answer.value += '.'">
+       <input type="button" value="=" onclick="forms.answer.value = eval(forms.answer.value)">
+     </div>
+   </form>
+ </div>
 </body>
 </html>
